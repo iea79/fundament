@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="stylesheet" href="libs/jquery.mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+        <link rel="stylesheet" href="libs/owl.carousel/owl.carousel.min.css">
+        
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700|Roboto:300,400&amp;subset=cyrillic" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+
+        <title>Главная | Фундамент Групп</title>
+        <meta name="description" content="Главная">
+        <meta name="keywords" content="фундамент">
+    </head>
+    <body>
+        <header>
+            <div class="header-layout">
+                <a class="logo" href="index.html">
+                    <div class="img-container">
+                        <img src="img/logo.svg" alt="Фундамент групп">
+                    </div>
+                    <div class="logo-label">
+                        <b>Фундамент групп</b>
+                        <span>Строительная компания</span>
+                    </div>
+                </a>
+                <div class="nav-container">
+                    <div class="header-contacts">
+                        <div>
+                            <p>
+                                <a class="phone" href="tel:+79450000000">+7 945 000-00-00</a>
+                            </p>
+                            <p>
+                                <a class="email" href="mailto:info@fundament-group.ru">info@fundament-group.ru</a>
+                            </p>
+                        </div>
+                        <a class="btn-call open-callback3" href="#">Заказать звонок</a>
+                    </div>
+                    <div class="cross">
+                        <a href="#"></a>
+                    </div>
+                    <nav class="nav-categories">
+                        <ul>
+                            <li>
+                                <a href="#">Забивные сваи</a>
+                            </li>
+                            <li>
+                                <a href="#">Свайно-ростверковый</a>
+                            </li>
+                            <li>
+                                <a href="#">Ленточный</a>
+                            </li>
+                            <li>
+                                <a href="#">Плита</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="nav-main">
+                        <ul>
+                            <li>
+                                <a href="#">Работы</a>
+                            </li>
+                            <li>
+                                <a href="#">Отзывы</a>
+                            </li>
+                            <li>
+                                <a href="#">Про фундаменты</a>
+                            </li>
+                            <li>
+                                <a href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-contacts">
+                    <div>
+                        <p>
+                            <a class="phone" href="tel:+79450000000">+7 945 000-00-00</a>
+                        </p>
+                        <p>
+                            <a class="email" href="mailto:info@fundament-group.ru">info@fundament-group.ru</a>
+                        </p>
+                    </div>
+                    <a class="btn-call open-callback3" href="#">Заказать звонок</a>
+                </div>
+                <div class="toggle-menu">
+                    <span></span>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="content-section banner-section calc-section" style="background-image: url(img/banner2.jpg)" id="scroll-1">
+                <div class="container">
+                    <div class="banner-section-layout">
+                        <div class="banner-section-text">
+                            <h1>
+                                Забивка свай для загородных
+                                <br> домов в Москва и МО
+                                <br> Начало работ через 1-2 дня
+                            </h1>
+                            <p class="banner-section-caption">
+                                ГеоЖБ сваи с доставкой и забивкой под ключ по
+                                <br> выгодной цене от
+                                <span class="strikethrough">4200</span>
+                                <span class="highlighted">3800</span> рублей за сваю
+                            </p>
+                        </div>
+                        <div class="calc calc-price">
+                            <div class="calc-top">
+                                <p class="calc-title">Расчёт стоимости</p>
+                                <p class="calc-tip">
+                                    *Расчёт приблизительный. Детальный расчёт свайного поля выполняет наш конструктор.
+                                </p>
+                                <form action="index.html" method="post" novalidate>
+                                    <div class="form-block">
+                                        <select name="material">
+                                            <option value="" disabled selected hidden>Материал дома</option>
+                                            <option value="1">Кирпич</option>
+                                            <option value="2">Керамоблок</option>
+                                            <option value="3">Дерево</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-block">
+                                        <select name="height">
+                                            <option value="" disabled selected hidden>Этажность</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4+</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-block">
+                                        <select name="wall-length">
+                                            <option value="" disabled selected hidden>Длина несущих стен</option>
+                                            <option value="1">380 мм</option>
+                                            <option value="1">500 мм</option>
+                                            <option value="1">640 мм</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-block hidden">
+                                        <div class="calc-result">
+                                            <div class="calc-result-type">
+                                                <p>Цена от</p>
+                                            </div>
+                                            <div class="calc-result-value">
+                                                <p>
+                                                    <output name="result">21 530 000</output> руб.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="calc-result">
+                                <div class="calc-result-type">
+                                    <p>Цена от</p>
+                                </div>
+                                <div class="calc-result-value">
+                                    <p>
+                                        <output name="result">21 530 000</output> руб.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="content-section double-content-section porfolio-section" id="scroll-2">
+                <div class="top-block">
+                    <div class="container">
+                        <div class="top-block-layout">
+                            <p class="top-block-title">Получите
+                                <span>ИМЕННОЙ СЕРТИФИКАТ</span> на скидку 4% на фундамент!</p>
+                            <p>Сертификат высылается на почту. Контакты, которые Вы оставляете, отражаются в сертификате.</p>
+                            <form action="index.html" method="post" novalidate>
+                                <div class="form-block">
+                                    <input type="text" name="name" value="" placeholder="Имя" required>
+                                </div>
+                                <div class="form-block">
+                                    <input type="tel" name="tel" value="" placeholder="+7    (000) 000-00-00">
+                                </div>
+                                <div class="form-block">
+                                    <input type="email" name="email" value="" placeholder="E-mail*" required>
+                                </div>
+                                <div class="form-block">
+                                    <button class="btn" type="submit" name="submit">
+                                        Получить сертификат
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="130%" width="105%" preserveAspectRatio="none" viewBox="0 0 294 77.94">
+                                          <path class="cls-1" d="M271.419,1435.06c77.126-1.62,154.534-7.76,231.25-2.78,16.235,0,29.319,14.32,29.256,31.47-0.019,16.42-13.219,30.22-29.425,30.35-76.908,1.07-153.484,5.17-230.839,2.18-16.272-.36-29.509-14.14-29.58-30.9-0.053-16.6,13.08-30.13,29.338-30.32h0Z" transform="translate(-238.5 -1426.31)"/>
+                                          <path class="cls-2" d="M502.659,1434.68c-77.168-1.62-154.617-7.76-231.374-2.77-16.245-.01-29.336,14.32-29.272,31.48,0.019,16.43,13.226,30.24,29.441,30.36,76.949,1.08,153.567,5.18,230.962,2.18,16.282-.35,29.526-14.14,29.6-30.91,0.053-16.61-13.087-30.14-29.354-30.34h0Z" transform="translate(-238.5 -1426.31)"/>
+                                          <path class="cls-3" d="M499.252,1432.5c-39.012-3.09-77.74-5.42-116.179-5.65q-14.415-.09-28.785.18-7.185.15-14.362,0.37-3.589.12-7.176,0.25t-7.172.29q-28.684,1.26-57.345,3.69a28.924,28.924,0,0,0-20.7,9.54,32.11,32.11,0,0,0-6.256,10,32.675,32.675,0,0,0-2.261,12.1c0.044,15.81,13.146,31.87,29.246,34.53a752.99,752.99,0,0,0,115.173,5.72c19.262-.45,38.561-1.54,57.891-2.9s38.689-2.97,58.069-4.39a31.681,31.681,0,0,0,29.621-31.34c0.106-16.26-13.25-30.89-29.761-32.39h0Z" transform="translate(-238.5 -1426.31)"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="double-content-section-layout">
+                        <section>
+                            <h2>Фото наших работ</h2>
+                            <div class="images-carousel owl-carousel">
+                                <div class="images-carousel-item">
+                                    <div class="img-container">
+                                        <img src="img/portfolio-photo1.jpg" alt="">
+                                    </div>
+                                    <div class="images-carousel-item-bottom">
+                                        <div class="images-carousel-item-info">
+                                            <p>
+                                                МО, Красногорский р-н, СНТ Ивановское<br>
+                                                55 свай 150*150*3000мм и обвязка бруском
+                                            </p>
+                                        </div>
+                                        <a href="#" class="btn">
+                                            Перейти в фото-галерею
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="130%" width="105%" preserveAspectRatio="none" viewBox="0 0 294 77.94">
+                                              <path class="cls-1" d="M271.419,1435.06c77.126-1.62,154.534-7.76,231.25-2.78,16.235,0,29.319,14.32,29.256,31.47-0.019,16.42-13.219,30.22-29.425,30.35-76.908,1.07-153.484,5.17-230.839,2.18-16.272-.36-29.509-14.14-29.58-30.9-0.053-16.6,13.08-30.13,29.338-30.32h0Z" transform="translate(-238.5 -1426.31)"/>
+                                              <path class="cls-2" d="M502.659,1434.68c-77.168-1.62-154.617-7.76-231.374-2.77-16.245-.01-29.336,14.32-29.272,31.48,0.019,16.43,13.226,30.24,29.441,30.36,76.949,1.08,153.567,5.18,230.962,2.18,16.282-.35,29.526-14.14,29.6-30.91,0.053-16.61-13.087-30.14-29.354-30.34h0Z" transform="translate(-238.5 -1426.31)"/>
+                                              <path class="cls-3" d="M499.252,1432.5c-39.012-3.09-77.74-5.42-116.179-5.65q-14.415-.09-28.785.18-7.185.15-14.362,0.37-3.589.12-7.176,0.25t-7.172.29q-28.684,1.26-57.345,3.69a28.924,28.924,0,0,0-20.7,9.54,32.11,32.11,0,0,0-6.256,10,32.675,32.675,0,0,0-2.261,12.1c0.044,15.81,13.146,31.87,29.246,34.53a752.99,752.99,0,0,0,115.173,5.72c19.262-.45,38.561-1.54,57.891-2.9s38.689-2.97,58.069-4.39a31.681,31.681,0,0,0,29.621-31.34c0.106-16.26-13.25-30.89-29.761-32.39h0Z" transform="translate(-238.5 -1426.31)"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="images-carousel-item">
+                                    <div class="img-container">
+                                        <img src="img/portfolio-photo1.jpg" alt="">
+                                    </div>
+                                    <div class="images-carousel-item-bottom">
+                                        <div class="images-carousel-item-info">
+                                            <p>
+                                                МО, Красногорский р-н, СНТ Ивановское<br>
+                                                55 свай 150*150*3000мм и обвязка бруском
+                                            </p>
+                                        </div>
+                                        <a href="#" class="btn">
+                                            Перейти в фото-галерею
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="130%" width="105%" preserveAspectRatio="none" viewBox="0 0 294 77.94">
+                                              <path class="cls-1" d="M271.419,1435.06c77.126-1.62,154.534-7.76,231.25-2.78,16.235,0,29.319,14.32,29.256,31.47-0.019,16.42-13.219,30.22-29.425,30.35-76.908,1.07-153.484,5.17-230.839,2.18-16.272-.36-29.509-14.14-29.58-30.9-0.053-16.6,13.08-30.13,29.338-30.32h0Z" transform="translate(-238.5 -1426.31)"/>
+                                              <path class="cls-2" d="M502.659,1434.68c-77.168-1.62-154.617-7.76-231.374-2.77-16.245-.01-29.336,14.32-29.272,31.48,0.019,16.43,13.226,30.24,29.441,30.36,76.949,1.08,153.567,5.18,230.962,2.18,16.282-.35,29.526-14.14,29.6-30.91,0.053-16.61-13.087-30.14-29.354-30.34h0Z" transform="translate(-238.5 -1426.31)"/>
+                                              <path class="cls-3" d="M499.252,1432.5c-39.012-3.09-77.74-5.42-116.179-5.65q-14.415-.09-28.785.18-7.185.15-14.362,0.37-3.589.12-7.176,0.25t-7.172.29q-28.684,1.26-57.345,3.69a28.924,28.924,0,0,0-20.7,9.54,32.11,32.11,0,0,0-6.256,10,32.675,32.675,0,0,0-2.261,12.1c0.044,15.81,13.146,31.87,29.246,34.53a752.99,752.99,0,0,0,115.173,5.72c19.262-.45,38.561-1.54,57.891-2.9s38.689-2.97,58.069-4.39a31.681,31.681,0,0,0,29.621-31.34c0.106-16.26-13.25-30.89-29.761-32.39h0Z" transform="translate(-238.5 -1426.31)"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="images-carousel-item">
+                                    <div class="img-container">
+                                        <img src="img/portfolio-photo1.jpg" alt="">
+                                    </div>
+                                    <div class="images-carousel-item-bottom">
+                                        <div class="images-carousel-item-info">
+                                            <p>
+                                                МО, Красногорский р-н, СНТ Ивановское<br>
+                                                55 свай 150*150*3000мм и обвязка бруском
+                                            </p>
+                                        </div>
+                                        <a href="#" class="btn">
+                                            Перейти в фото-галерею
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="130%" width="105%" preserveAspectRatio="none" viewBox="0 0 294 77.94">
+                                              <path class="cls-1" d="M271.419,1435.06c77.126-1.62,154.534-7.76,231.25-2.78,16.235,0,29.319,14.32,29.256,31.47-0.019,16.42-13.219,30.22-29.425,30.35-76.908,1.07-153.484,5.17-230.839,2.18-16.272-.36-29.509-14.14-29.58-30.9-0.053-16.6,13.08-30.13,29.338-30.32h0Z" transform="translate(-238.5 -1426.31)"/>
+                                              <path class="cls-2" d="M502.659,1434.68c-77.168-1.62-154.617-7.76-231.374-2.77-16.245-.01-29.336,14.32-29.272,31.48,0.019,16.43,13.226,30.24,29.441,30.36,76.949,1.08,153.567,5.18,230.962,2.18,16.282-.35,29.526-14.14,29.6-30.91,0.053-16.61-13.087-30.14-29.354-30.34h0Z" transform="translate(-238.5 -1426.31)"/>
+                                              <path class="cls-3" d="M499.252,1432.5c-39.012-3.09-77.74-5.42-116.179-5.65q-14.415-.09-28.785.18-7.185.15-14.362,0.37-3.589.12-7.176,0.25t-7.172.29q-28.684,1.26-57.345,3.69a28.924,28.924,0,0,0-20.7,9.54,32.11,32.11,0,0,0-6.256,10,32.675,32.675,0,0,0-2.261,12.1c0.044,15.81,13.146,31.87,29.246,34.53a752.99,752.99,0,0,0,115.173,5.72c19.262-.45,38.561-1.54,57.891-2.9s38.689-2.97,58.069-4.39a31.681,31.681,0,0,0,29.621-31.34c0.106-16.26-13.25-30.89-29.761-32.39h0Z" transform="translate(-238.5 -1426.31)"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="images-carousel-item">
+                                    <div class="img-container">
+                                        <img src="img/portfolio-photo1.jpg" alt="">
+                                    </div>
+                                    <div class="images-carousel-item-bottom">
+                                        <div class="images-carousel-item-info">
+                                            <p>
+                                                МО, Красногорский р-н, СНТ Ивановское<br>
+                                                55 свай 150*150*3000мм и обвязка бруском
+                                            </p>
+                                        </div>
+                                        <a href="#" class="btn">
+                                            Перейти в фото-галерею
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="130%" width="105%" preserveAspectRatio="none" viewBox="0 0 294 77.94">
+                                              <path class="cls-1" d="M271.419,1435.06c77.126-1.62,154.534-7.76,231.25-2.78,16.235,0,29.319,14.32,29.256,31.47-0.019,16.42-13.219,30.22-29.425,30.35-76.908,1.07-153.484,5.17-230.839,2.18-16.272-.36-29.509-14.14-29.58-30.9-0.053-16.6,13.08-30.13,29.338-30.32h0Z" transform="translate(-238.5 -1426.31)"/>
+                                              <path class="cls-2" d="M502.659,1434.68c-77.168-1.62-154.617-7.76-231.374-2.77-16.245-.01-29.336,14.32-29.272,31.48,0.019,16.43,13.226,30.24,29.441,30.36,76.949,1.08,153.567,5.18,230.962,2.18,16.282-.35,29.526-14.14,29.6-30.91,0.053-16.61-13.087-30.14-29.354-30.34h0Z" transform="translate(-238.5 -1426.31)"/>
+                                              <path class="cls-3" d="M499.252,1432.5c-39.012-3.09-77.74-5.42-116.179-5.65q-14.415-.09-28.785.18-7.185.15-14.362,0.37-3.589.12-7.176,0.25t-7.172.29q-28.684,1.26-57.345,3.69a28.924,28.924,0,0,0-20.7,9.54,32.11,32.11,0,0,0-6.256,10,32.675,32.675,0,0,0-2.261,12.1c0.044,15.81,13.146,31.87,29.246,34.53a752.99,752.99,0,0,0,115.173,5.72c19.262-.45,38.561-1.54,57.891-2.9s38.689-2.97,58.069-4.39a31.681,31.681,0,0,0,29.621-31.34c0.106-16.26-13.25-30.89-29.761-32.39h0Z" transform="translate(-238.5 -1426.31)"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="images-carousel-item">
+                                    <div class="img-container">
+                                        <img src="img/portfolio-photo1.jpg" alt="">
+                                    </div>
+                                    <div class="images-carousel-item-bottom">
+                                        <div class="images-carousel-item-info">
+                                            <p>
+                                                МО, Красногорский р-н, СНТ Ивановское<br>
+                                                55 свай 150*150*3000мм и обвязка бруском
+                                            </p>
+                                        </div>
+                                        <a href="#" class="btn">
+                                            Перейти в фото-галерею
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="130%" width="105%" preserveAspectRatio="none" viewBox="0 0 294 77.94">
+                                              <path class="cls-1" d="M271.419,1435.06c77.126-1.62,154.534-7.76,231.25-2.78,16.235,0,29.319,14.32,29.256,31.47-0.019,16.42-13.219,30.22-29.425,30.35-76.908,1.07-153.484,5.17-230.839,2.18-16.272-.36-29.509-14.14-29.58-30.9-0.053-16.6,13.08-30.13,29.338-30.32h0Z" transform="translate(-238.5 -1426.31)"/>
+                                              <path class="cls-2" d="M502.659,1434.68c-77.168-1.62-154.617-7.76-231.374-2.77-16.245-.01-29.336,14.32-29.272,31.48,0.019,16.43,13.226,30.24,29.441,30.36,76.949,1.08,153.567,5.18,230.962,2.18,16.282-.35,29.526-14.14,29.6-30.91,0.053-16.61-13.087-30.14-29.354-30.34h0Z" transform="translate(-238.5 -1426.31)"/>
+                                              <path class="cls-3" d="M499.252,1432.5c-39.012-3.09-77.74-5.42-116.179-5.65q-14.415-.09-28.785.18-7.185.15-14.362,0.37-3.589.12-7.176,0.25t-7.172.29q-28.684,1.26-57.345,3.69a28.924,28.924,0,0,0-20.7,9.54,32.11,32.11,0,0,0-6.256,10,32.675,32.675,0,0,0-2.261,12.1c0.044,15.81,13.146,31.87,29.246,34.53a752.99,752.99,0,0,0,115.173,5.72c19.262-.45,38.561-1.54,57.891-2.9s38.689-2.97,58.069-4.39a31.681,31.681,0,0,0,29.621-31.34c0.106-16.26-13.25-30.89-29.761-32.39h0Z" transform="translate(-238.5 -1426.31)"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <h2>Видео с объектов</h2>
+                            <div class="images-carousel owl-carousel">
+                                <div class="images-carousel-item">
+                                    <div class="video-container">
+                                        <div class="video">
+                                            <iframe src="https://www.youtube.com/embed/FDHGOtlSRtE?showinfo=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                    <div class="images-carousel-item-bottom">
+                                        <div class="images-carousel-item-info">
+                                            <p>
+                                                Наименование видео
+                                            </p>
+                                            <p>
+                                                Короткое описание видео здесь
+                                            </p>
+                                        </div>
+                                        <a href="#" class="btn">
+                                            Перейти в фото-галерею
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="130%" width="105%" preserveAspectRatio="none" viewBox="0 0 294 77.94">
+                                              <path class="cls-1" d="M271.419,1435.06c77.126-1.62,154.534-7.76,231.25-2.78,16.235,0,29.319,14.32,29.256,31.47-0.019,16.42-13.219,30.22-29.425,30.35-76.908,1.07-153.484,5.17-230.839,2.18-16.272-.36-29.509-14.14-29.58-30.9-0.053-16.6,13.08-30.13,29.338-30.32h0Z" transform="translate(-238.5 -1426.31)"/>
+                                              <path class="cls-2" d="M502.659,1434.68c-77.168-1.62-154.617-7.76-231.374-2.77-16.245-.01-29.336,14.32-29.272,31.48,0.019,16.43,13.226,30.24,29.441,30.36,76.949,1.08,153.567,5.18,230.962,2.18,16.282-.35,29.526-14.14,29.6-30.91,0.053-16.61-13.087-30.14-29.354-30.34h0Z" transform="translate(-238.5 -1426.31)"/>
+                                              <path class="cls-3" d="M499.252,1432.5c-39.012-3.09-77.74-5.42-116.179-5.65q-14.415-.09-28.785.18-7.185.15-14.362,0.37-3.589.12-7.176,0.25t-7.172.29q-28.684,1.26-57.345,3.69a28.924,28.924,0,0,0-20.7,9.54,32.11,32.11,0,0,0-6.256,10,32.675,32.675,0,0,0-2.261,12.1c0.044,15.81,13.146,31.87,29.246,34.53a752.99,752.99,0,0,0,115.173,5.72c19.262-.45,38.561-1.54,57.891-2.9s38.689-2.97,58.069-4.39a31.681,31.681,0,0,0,29.621-31.34c0.106-16.26-13.25-30.89-29.761-32.39h0Z" transform="translate(-238.5 -1426.31)"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="images-carousel-item">
+                                    <div class="video-container">
+                                        <div class="video">
+                                            <iframe src="https://www.youtube.com/embed/FDHGOtlSRtE?showinfo=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                    <div class="images-carousel-item-bottom">
+                                        <div class="images-carousel-item-info">
+                                            <p>
+                                                Наименование видео
+                                            </p>
+                                            <p>
+                                                Короткое описание видео здесь
+                                            </p>
+                                        </div>
+                                        <a href="#" class="btn">
+                                            Перейти в фото-галерею
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="130%" width="105%" preserveAspectRatio="none" viewBox="0 0 294 77.94">
+                                              <path class="cls-1" d="M271.419,1435.06c77.126-1.62,154.534-7.76,231.25-2.78,16.235,0,29.319,14.32,29.256,31.47-0.019,16.42-13.219,30.22-29.425,30.35-76.908,1.07-153.484,5.17-230.839,2.18-16.272-.36-29.509-14.14-29.58-30.9-0.053-16.6,13.08-30.13,29.338-30.32h0Z" transform="translate(-238.5 -1426.31)"/>
+                                              <path class="cls-2" d="M502.659,1434.68c-77.168-1.62-154.617-7.76-231.374-2.77-16.245-.01-29.336,14.32-29.272,31.48,0.019,16.43,13.226,30.24,29.441,30.36,76.949,1.08,153.567,5.18,230.962,2.18,16.282-.35,29.526-14.14,29.6-30.91,0.053-16.61-13.087-30.14-29.354-30.34h0Z" transform="translate(-238.5 -1426.31)"/>
+                                              <path class="cls-3" d="M499.252,1432.5c-39.012-3.09-77.74-5.42-116.179-5.65q-14.415-.09-28.785.18-7.185.15-14.362,0.37-3.589.12-7.176,0.25t-7.172.29q-28.684,1.26-57.345,3.69a28.924,28.924,0,0,0-20.7,9.54,32.11,32.11,0,0,0-6.256,10,32.675,32.675,0,0,0-2.261,12.1c0.044,15.81,13.146,31.87,29.246,34.53a752.99,752.99,0,0,0,115.173,5.72c19.262-.45,38.561-1.54,57.891-2.9s38.689-2.97,58.069-4.39a31.681,31.681,0,0,0,29.621-31.34c0.106-16.26-13.25-30.89-29.761-32.39h0Z" transform="translate(-238.5 -1426.31)"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="images-carousel-item">
+                                    <div class="video-container">
+                                        <div class="video">
+                                            <iframe src="https://www.youtube.com/embed/FDHGOtlSRtE?showinfo=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                    <div class="images-carousel-item-bottom">
+                                        <div class="images-carousel-item-info">
+                                            <p>
+                                                Наименование видео
+                                            </p>
+                                            <p>
+                                                Короткое описание видео здесь
+                                            </p>
+                                        </div>
+                                        <a href="#" class="btn">
+                                            Перейти в фото-галерею
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="130%" width="105%" preserveAspectRatio="none" viewBox="0 0 294 77.94">
+                                              <path class="cls-1" d="M271.419,1435.06c77.126-1.62,154.534-7.76,231.25-2.78,16.235,0,29.319,14.32,29.256,31.47-0.019,16.42-13.219,30.22-29.425,30.35-76.908,1.07-153.484,5.17-230.839,2.18-16.272-.36-29.509-14.14-29.58-30.9-0.053-16.6,13.08-30.13,29.338-30.32h0Z" transform="translate(-238.5 -1426.31)"/>
+                                              <path class="cls-2" d="M502.659,1434.68c-77.168-1.62-154.617-7.76-231.374-2.77-16.245-.01-29.336,14.32-29.272,31.48,0.019,16.43,13.226,30.24,29.441,30.36,76.949,1.08,153.567,5.18,230.962,2.18,16.282-.35,29.526-14.14,29.6-30.91,0.053-16.61-13.087-30.14-29.354-30.34h0Z" transform="translate(-238.5 -1426.31)"/>
+                                              <path class="cls-3" d="M499.252,1432.5c-39.012-3.09-77.74-5.42-116.179-5.65q-14.415-.09-28.785.18-7.185.15-14.362,0.37-3.589.12-7.176,0.25t-7.172.29q-28.684,1.26-57.345,3.69a28.924,28.924,0,0,0-20.7,9.54,32.11,32.11,0,0,0-6.256,10,32.675,32.675,0,0,0-2.261,12.1c0.044,15.81,13.146,31.87,29.246,34.53a752.99,752.99,0,0,0,115.173,5.72c19.262-.45,38.561-1.54,57.891-2.9s38.689-2.97,58.069-4.39a31.681,31.681,0,0,0,29.621-31.34c0.106-16.26-13.25-30.89-29.761-32.39h0Z" transform="translate(-238.5 -1426.31)"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <section class="content-section foundation-types-section background-darker" id="scroll-3">
+                <div class="container">
+                    <h2>Для каких домов подходит свайно-ростверковый фундамент?</h2>
+                    <ul class="cards-list cards-list-horizontal">
+                        <li class="card">
+                            <div class="card-content">
+                                <b>Дома из клеенного и профилированного бруса</b>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/found-type1-2.jpg" alt="">
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card-content">
+                                <b>Дома из оцилиндрованного бревна</b>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/found-type2-2.jpg" alt="">
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card-content">
+                                <b>Кркасные дома и дома из Сип панелей</b>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/found-type1-2.jpg" alt="">
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card-content">
+                                <b>Дома из пено и газоблоков, из керамических блоков</b>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/found-type2-2.jpg" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="foundation-types-section-bottom">
+                        <section class="advantages">
+                            <h3>
+                                <span>Преимущества</span>
+                            </h3>
+                            <div class="bordered-content-list">
+                                <div class="bordered-content">
+                                    <p>Выдерживает высокие нагрузки</p>
+                                </div>
+                                <div class="bordered-content">
+                                    <p>Строительство от 10 дней</p>
+                                </div>
+                                <div class="bordered-content">
+                                    <p>Подходит для большинства грунтов</p>
+                                </div>
+                                <div class="bordered-content">
+                                    <p>Относительно невысокая стоимость</p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="disadvantages">
+                            <h3>
+                                <span>Недостатки</span>
+                            </h3>
+                            <div class="bordered-content-list">
+                                <div class="bordered-content big">
+                                    <p>В последствии нужно делать перекрытие пола 1-го этажа (монолитная плита, плиты перекрятия, деревянные лаги)</p>
+                                </div>
+                                <div class="bordered-content">
+                                    <p>Не подходит для болотистых грунтов</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+            <section class="content-section about-us-section background-light" id="scroll-4">
+                <div class="top-block">
+                    <div class="container">
+                        <div class="top-block-layout">
+                            <p class="top-block-title">Геология бесплатно!</p>
+                            <p>Оставьте Ваши контакты и получите КУПОН на бесплатные геологические изыскания на участке.</p>
+                            <form action="index.html" method="post" novalidate>
+                                <div class="form-block">
+                                    <input type="text" name="name" value="" placeholder="Имя" required>
+                                </div>
+                                <div class="form-block">
+                                    <input type="tel" name="tel" value="" placeholder="+7    (000) 000-00-00">
+                                </div>
+                                <div class="form-block">
+                                    <input type="email" name="email" value="" placeholder="E-mail*" required>
+                                </div>
+                                <div class="form-block">
+                                    <button class="btn" type="submit" name="submit">
+                                        Получить купон
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="130%" width="105%" preserveAspectRatio="none" viewBox="0 0 294 77.94">
+                                          <path class="cls-1" d="M271.419,1435.06c77.126-1.62,154.534-7.76,231.25-2.78,16.235,0,29.319,14.32,29.256,31.47-0.019,16.42-13.219,30.22-29.425,30.35-76.908,1.07-153.484,5.17-230.839,2.18-16.272-.36-29.509-14.14-29.58-30.9-0.053-16.6,13.08-30.13,29.338-30.32h0Z" transform="translate(-238.5 -1426.31)"/>
+                                          <path class="cls-2" d="M502.659,1434.68c-77.168-1.62-154.617-7.76-231.374-2.77-16.245-.01-29.336,14.32-29.272,31.48,0.019,16.43,13.226,30.24,29.441,30.36,76.949,1.08,153.567,5.18,230.962,2.18,16.282-.35,29.526-14.14,29.6-30.91,0.053-16.61-13.087-30.14-29.354-30.34h0Z" transform="translate(-238.5 -1426.31)"/>
+                                          <path class="cls-3" d="M499.252,1432.5c-39.012-3.09-77.74-5.42-116.179-5.65q-14.415-.09-28.785.18-7.185.15-14.362,0.37-3.589.12-7.176,0.25t-7.172.29q-28.684,1.26-57.345,3.69a28.924,28.924,0,0,0-20.7,9.54,32.11,32.11,0,0,0-6.256,10,32.675,32.675,0,0,0-2.261,12.1c0.044,15.81,13.146,31.87,29.246,34.53a752.99,752.99,0,0,0,115.173,5.72c19.262-.45,38.561-1.54,57.891-2.9s38.689-2.97,58.069-4.39a31.681,31.681,0,0,0,29.621-31.34c0.106-16.26-13.25-30.89-29.761-32.39h0Z" transform="translate(-238.5 -1426.31)"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <h2>Кто МЫ<span>?</span>
+                    </h2>
+                    <ul class="cards-list cards-list-center">
+                        <li class="card">
+                            <div class="card-content">
+                                <p>
+                                    Парк из
+                                    <b>4-х крупнейших</b> собственных забивных установок.
+                                </p>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/about-us-1.jpg" alt="">
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card-content">
+                                <p>
+                                    Диллеры
+                                    <b>3-х крупнейших заводов</b> ЖБИ-производителей свай в Московской Области.
+                                </p>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/about-us-2.jpg" alt="">
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card-content">
+                                <p>
+                                    За 2017 год забили
+                                    <b>3981</b> сваю и построили более 80 свайных фундаментов.
+                                </p>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/about-us-3.jpg" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="content-section contacts-section" id="scroll-5">
+                <div class="container">
+                    <div class="contacts-info">
+                        <h2>Контакты</h2>
+                        <ul>
+                            <li class="contacts-adress">Россия, Москва, Зеленоград, к340 / Россия, Москва, Флотская улица, 5А, 4 эт. каб 401</li>
+                            <li class="contacts-phone">Телефон:
+                                <a href="tel:+74993221096">8-499-322-10-96</a>
+                            </li>
+                            <li class="contacts-email">E-mail:
+                                <a href="mailto:fundamentgr@gmail.com">fundamentgr@gmail.com</a>
+                            </li>
+                            <li class="contacts-timetable">График работы: С 9:00-20:00 пн-пт<br> / С 10:00-20:00 сб-вс</li>
+                        </ul>
+                        <div class="contacts-questions">
+                            <b>У вас остались вопросы</b>
+                            <form action="index.html" method="post" novalidate>
+                                <div class="form-block textarea-block">
+                                    <textarea name="question" placeholder="Чем мы можем вам помочь?" required></textarea>
+                                </div>
+                                <div class="form-block-double">
+                                    <div class="form-block">
+                                        <input type="email" name="email" value="" placeholder="E-mail*" required>
+                                    </div>
+                                    <div class="form-block">
+                                        <button class="btn" type="submit" name="submit">
+                                            Отправить
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="267" height="72" viewBox="0 0 267 72" preserveAspectRatio="none">
+                                              <path class="cls-1" d="M552.772,9653.92c71.532-2.35,142.081-13.65,214.961-3.71,13.424,2.47,24.325,15.28,24.267,27.87,0,14.4-11.724,26.06-26.215,26.49-71.09,1.9-142.494,10.13-213.122,2.73-13.06-1.86-23.641-14.13-23.661-26.85v-2.37c0-13.11,10.671-23.68,23.77-24.16h0Z" transform="translate(-525.5 -9642.5)"/>
+                                              <path class="cls-2" d="M764.537,9653.11c-36.622-5.02-72.492-9.73-107.891-10.1q-13.276-.135-26.492.49-6.613.3-13.224,0.8c-2.2.17-4.409,0.34-6.614,0.54s-4.412.39-6.62,0.61c-17.661,1.75-35.425,4.23-53.516,7.09a32.965,32.965,0,0,0-17.108,9.59,27.932,27.932,0,0,0-5.194,7.66,22.027,22.027,0,0,0-1.4,4.17,19.165,19.165,0,0,0-.36,2.13c-0.04.35-.069,0.71-0.089,1.06s-0.028.72-.026,1.07c0.034,12.68,11.624,24.97,25.969,27.31,35.276,4.42,70.831,7.62,106.5,7.47q13.376-.03,26.764-0.65,6.692-.3,13.383-0.73,3.345-.225,6.69-0.46t6.687-.51c17.829-1.44,35.622-3.38,53.316-5.57,13.093-2.1,23.659-13.18,23.687-24.7v-2.16c0.08-11.53-10.947-22.75-24.461-25.11h0Z" transform="translate(-525.5 -9642.5)"/>
+                                              <path class="cls-2" d="M767.537,9653.26c-36.622-5.1-72.492-9.87-107.891-10.25q-13.278-.15-26.492.49-6.613.315-13.224,0.82-3.306.255-6.614,0.54c-2.206.2-4.412,0.4-6.62,0.62-17.661,1.78-35.425,4.3-53.516,7.19a32.916,32.916,0,0,0-17.108,9.74,28.1,28.1,0,0,0-5.194,7.76,22.584,22.584,0,0,0-1.4,4.23,20.526,20.526,0,0,0-.36,2.16c-0.04.36-.069,0.72-0.089,1.08s-0.028.73-.026,1.09c0.034,12.85,11.624,25.32,25.969,27.69,35.276,4.48,70.831,7.73,106.5,7.58q13.376-.03,26.764-0.66,6.692-.3,13.383-0.74c2.23-.15,4.46-0.3,6.69-0.47s4.458-.33,6.687-0.51c17.829-1.47,35.621-3.43,53.316-5.65,13.093-2.13,23.658-13.37,23.687-25.06v-2.18c0.08-11.7-10.947-23.08-24.461-25.47h0Z" transform="translate(-525.5 -9642.5)"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <div class="map" id="map"></div>
+                </div>
+                <script src="js/map.js"></script>
+            </section>
+            <nav class="nav-vertical">
+                <ul>
+                    <li class="active">
+                        <a href="#scroll-1"></a>
+                    </li>
+                    <li>
+                        <a href="#scroll-2"></a>
+                    </li>
+                    <li>
+                        <a href="#scroll-3"></a>
+                    </li>
+                    <li>
+                        <a href="#scroll-4"></a>
+                    </li>
+                    <li>
+                        <a href="#scroll-5"></a>
+                    </li>
+                </ul>
+            </nav>
+        </main>
+        <footer>
+            <div class="footer-layout">
+                <a class="logo" href="index.html">
+                    <div class="img-container">
+                        <img src="img/logo.svg" alt="Фундамент групп">
+                    </div>
+                    <div class="logo-label">
+                        <b>Фундамент групп</b>
+                        <span>Строительная компания</span>
+                    </div>
+                </a>
+                <div class="social-container">
+                    <ul class="social-list">
+                        <li>
+                            <a href="#">
+                                <img src="img/icon-social-vk.svg" alt="vk">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/icon-social-fb.svg" alt="facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/icon-social-yt.svg" alt="youtube">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/icon-social-tg.svg" alt="telegram">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/icon-social-ig.svg" alt="instagram">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-contacts">
+                    <a class="btn-call open-callback3" href="#">Заказать звонок</a>
+                </div>
+            </div>
+        </footer>
+
+        <div class="modal-container">
+            <div class="modal overlay"></div>
+            <div class="modal callback">
+                <div class="modal-top">
+                    <div class="cross">
+                        <a href="#"></a>
+                    </div>
+                    <b>Заказать звонок</b>
+                    <p>Вы получите расчет сметы с учетом: типа грунта, глубины подвода коммуникации, уровня грунтовых вод</p>
+                </div>
+                <div class="modal-bottom">
+                    <div class="modal-bottom-layout">
+                        <div class="modal-bottom-content">
+                            <p class="modal-bottom-content-title">Перезвонить мне в течение
+                                <span>30 секунд</span>
+                            </p>
+                            <form action="index.html" method="post" novalidate>
+                                <div class="form-block">
+                                    <input type="tel" name="tel" value="" placeholder="+7    (000) 000-00-00" required>
+                                </div>
+                                <div class="form-block">
+                                    <button class="btn" type="submit" name="submit">Заказать звонок</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-bottom-content">
+                            <p class="modal-bottom-content-title">Перезвонить мне
+                                <span>в указанное время</span>
+                            </p>
+                            <form action="index.html" method="post">
+                                <div class="form-block">
+                                    <input type="text" name="name" value="" placeholder="Имя*" required>
+                                </div>
+                                <div class="form-block">
+                                    <input type="tel" name="tel" value="" placeholder="+7    (000) 000-00-00" required>
+                                </div>
+                                <div class="form-block">
+                                    <input type="text" name="time" value="" placeholder="Укажите время" required>
+                                </div>
+                                <div class="form-block">
+                                    <input type="email" name="email" value="" placeholder="E-mail">
+                                </div>
+                                <div class="form-block">
+                                    <button class="btn" type="submit" name="submit">Заказать звонок</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal callback2">
+                <div class="modal-top">
+                    <div class="cross">
+                        <a href="#"></a>
+                    </div>
+                    <b>Заказать звонок</b>
+                    <p>Вы получите расчет сметы с учетом: типа грунта, глубины подвода коммуникации, уровня грунтовых вод</p>
+                </div>
+                <div class="modal-bottom">
+                    <div class="modal-bottom-layout">
+                        <div class="modal-bottom-content">
+                            <form class="form-wide" action="index.html" method="post" novalidate>
+                                <div class="form-block">
+                                    <input type="text" name="name" value="" placeholder="Имя*" required>
+                                </div>
+                                <div class="form-block">
+                                    <input type="tel" name="tel" value="" placeholder="+7    (000) 000-00-00" required>
+                                </div>
+                                <div class="form-block">
+                                    <input type="email" name="email" value="" placeholder="E-mail">
+                                </div>
+                                <div class="form-block">
+                                    <input type="file" name="file" value="" placeholder="Прикрепите файл" id="file">
+                                    <label for="file">Прикрепить файл</label>
+                                </div>
+                                <div class="form-block">
+                                    <button class="btn" type="submit" name="submit">Заказать звонок</button>
+                                </div>
+                            </form>
+                            <p>Через несколько минут к Вам на почту придет описание</p>
+                        </div>
+                        <div class="img-container">
+                            <img src="img/modal-callback2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal modal-small callback3">
+                <div class="modal-top">
+                    <div class="cross">
+                        <a href="#"></a>
+                    </div>
+                    <b>Перезвонить мне</b>
+                </div>
+                <div class="modal-bottom">
+                    <form action="index.html" method="post" novalidate>
+                        <div class="form-block">
+                            <input type="text" name="name" value="" placeholder="Имя*" required>
+                        </div>
+                        <div class="form-block">
+                            <input type="tel" name="tel" value="" placeholder="+7    (000) 000-00-00" required>
+                        </div>
+                        <div class="form-block">
+                            <button class="btn" type="submit" name="submit">Заказать звонок</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal callback-success">
+                <div class="modal-top">
+                    <div class="cross">
+                        <a href="#"></a>
+                    </div>
+                    <b>Заявка отправлена!</b>
+                    <p>Спасибо, ваша заявка была отправлена. Наши специалисты скоро свяжутся с вами.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Подключение скриптов -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="libs/jquery.mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="libs/jquery.maskedinput/jquery.maskedinput.min.js"></script>
+        <script src="libs/owl.carousel/owl.carousel.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtdiHU939F9YQaQ20-wwnUJfJ_GHvCV94&callback=initMap" async defer></script>
+        <script src="js/function.js"></script>
+    </body>
+</html>

@@ -1,158 +1,279 @@
-// Input text and textarea ================================================
-input:not([type]),
-input[type=text],
-input[type=password],
-input[type=email],
-input[type=url],
-input[type=search],
-input[type=tel],
-input[type=number],
-input[type=datetime], 
-textarea {
-	background-color: $input_bg_color;
-	border: 1px solid $input_border_color;
-	padding: 6px 15px;
-	outline: none;
-	font-size: 16px;
-	font-weight: 300;
-	font-family: $main_font_family;
-	border-radius: 5px;
-	@include trs(0.3s);
-	&:hover {
-	}
-	&:focus {
-		border: 1px solid #bebebe;
-		background-color: #f6f6f6;
-		@include placeholder {
-			color: red;
-		}
-	}
-	&.input_error {
-		background-color: #fff0f0;
-		border: 1px solid red;
-	}
-	// Placeholder for input +++++++++++++++
-	@include placeholder {
-		color: $input_placeholder_color;
-	}
+*:-ms-input-placeholder {
+    opacity: 1;
+    color: #a2a3a5;
+    font-weight: 400;
 }
 
-input[type=search]::-webkit-search-cancel-button,
-input[type=search]::-webkit-search-decoration {
-    -webkit-appearance: none;
+*::-ms-input-placeholder {
+    opacity: 1;
+    color: #a2a3a5;
+    font-weight: 400;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    height: auto;
+*::-webkit-input-placeholder {
+    opacity: 1;
+    color: #a2a3a5;
+    font-weight: 400;
 }
 
-// Input checkbox and radio ===============================================
-input[type=checkbox],
-input[type=radio] {
-	padding: 0;
+*:-ms-input-placeholder {
+    opacity: 1;
+    color: #a2a3a5;
+    font-weight: 400;
 }
 
-input[type=checkbox]:not(:disabled),
-input[type=radio]:not(:disabled) {
+*::placeholder {
+    opacity: 1;
+    color: #a2a3a5;
+    font-weight: 400;
+}
+
+input, button, textarea, select, select option {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    font: inherit;
+}
+
+input, select {
+    padding-top: 10px;
+    padding-bottom: 12px;
+}
+
+input, select, textarea {
+    width: 229px;
+    max-width: 100%;
+    padding-bottom: 7px;
+    color: #a2a3a5;
+    border: none;
+    border-bottom: 2px solid #c7c8c9;
+    background: transparent;
+}
+
+select {
+    padding-bottom: 2px;
     cursor: pointer;
-}
-
-input[type=checkbox],
-input[type=radio] {
-    display: inline-block;
-    height: 14px;
-    width: 14px;
-    border: 1px solid #aaa;
-    overflow: hidden;
-    margin-top: -4px;
-    vertical-align: middle;
+    -moz-appearance: none;
     -webkit-appearance: none;
-    outline: 0;
-    background: 0 0;
-    text-align: center;
-    position: relative;
+    appearance: none;
+    background-image: url(../img/arrow-select.png);
+    background-repeat: no-repeat;
+    background-position: 100% 60%;
 }
 
-input[type=radio] {
-    border-radius: 50%;
+select::-ms-expand {
+    display: none;
 }
 
-input[type=checkbox]:before,
-input[type=radio]:before {
+textarea {
+    width: 100%;
+}
+
+input:focus, select:focus, textarea:focus, button:focus {
+    border-bottom-color: #ffb438;
+    outline: none;
+}
+
+input.error, select.error, textarea.error {
+    border-bottom-color: #e23e3e;
+}
+
+input[type=file] {
+    display: none;
+}
+
+input[type=file]+label {
     display: block;
-}
-
-input[type=radio]:checked:before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    top: 50%;
-    left: 50%;
-    margin-top: -3px;
-    margin-left: -3px;
-    display: block;
-    position: absolute;
-    border-radius: 50%;
-    background: #000;
-}
-
-input[type=checkbox]:checked:before,
-input[type=checkbox]:indeterminate:before {
-    content: "\2714";
-    font-size: 12px;
-    -webkit-font-smoothing: antialiased;
+    width: 100%;
+    padding: 5px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
     text-align: center;
-    line-height: 13px;
-    color: #000;
+    color: #a2a3a5;
+    border: 2px dashed #a2a3a5;
+    font-size: 24px;
 }
 
-input[type=checkbox]:indeterminate:before {
-    content: "\f068";
+input[type=file]+label:hover {
+    color: #ffb438;
+    border-color: #ffb438;
 }
 
-input[type=checkbox]:disabled,
-input[type=radio]:disabled {
-    border-color: #ddd;
+input[type=tel] {
+    background-image: url(../img/tel-background.svg);
+    background-repeat: no-repeat;
+    background-position: 0 55%;
+    background-position-x: 0%;
+    background-position-y: 55%;
+    padding-left: 5px;
+    background-size: 2.1em;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
-input[type=radio]:disabled:checked:before {
-    background-color: #aaa;
+input[type=tel]:not(:placeholder-shown) {
+    background-image: none;
 }
 
-input[type=checkbox]:disabled:checked:before,
-input[type=checkbox]:disabled:indeterminate:before {
-    color: #aaa;
+textarea {
+    resize: none;
 }
 
+// // Input text and textarea ================================================
+// input:not([type]),
+// input[type=text],
+// input[type=password],
+// input[type=email],
+// input[type=url],
+// input[type=search],
+// input[type=tel],
+// input[type=number],
+// input[type=datetime], 
+// textarea {
+// 	background-color: $input_bg_color;
+// 	border: 1px solid $input_border_color;
+// 	padding: 6px 15px;
+// 	outline: none;
+// 	font-size: 16px;
+// 	font-weight: 300;
+// 	font-family: $main_font_family;
+// 	border-radius: 5px;
+// 	@include trs(0.3s);
+// 	&:hover {
+// 	}
+// 	&:focus {
+// 		border: 1px solid #bebebe;
+// 		background-color: #f6f6f6;
+// 		@include placeholder {
+// 			color: red;
+// 		}
+// 	}
+// 	&.input_error {
+// 		background-color: #fff0f0;
+// 		border: 1px solid red;
+// 	}
+// 	// Placeholder for input +++++++++++++++
+// 	@include placeholder {
+// 		color: $input_placeholder_color;
+// 	}
+// }
 
-// Style for button and pseudo button for input and link
-.btn {
-	color: $btn_default_text_color;
-	font-family: $main_font_family;
-	font-size: 16px;
-	font-weight: 300;
-	padding: 5px 15px 7px;
-	border: none;
-	outline: none;
-	text-decoration: none;
-	display: inline-block;
-	background-color: $btn_default_bg_color;
-	text-align: center;
-	max-width: 100%;
-	cursor: pointer;
-	border-radius: 5px;
-	@include trs(0.3s);
-	&:hover {
-		background-color: lighten($btn_default_bg_color, 20%);
-	}
-	@each $status_el, $color_bg in $el_colors {
-		&__#{$status_el} {
-			background-color: $color_bg;
-			color: $btn_contrast_text_color;
-			&:hover {
-				background-color: lighten($color_bg, 20%);
-			}
-		}
-	}	
-}
+// input[type=search]::-webkit-search-cancel-button,
+// input[type=search]::-webkit-search-decoration {
+//     -webkit-appearance: none;
+// }
+
+// input[type=number]::-webkit-inner-spin-button,
+// input[type=number]::-webkit-outer-spin-button {
+//     height: auto;
+// }
+
+// // Input checkbox and radio ===============================================
+// input[type=checkbox],
+// input[type=radio] {
+// 	padding: 0;
+// }
+
+// input[type=checkbox]:not(:disabled),
+// input[type=radio]:not(:disabled) {
+//     cursor: pointer;
+// }
+
+// input[type=checkbox],
+// input[type=radio] {
+//     display: inline-block;
+//     height: 14px;
+//     width: 14px;
+//     border: 1px solid #aaa;
+//     overflow: hidden;
+//     margin-top: -4px;
+//     vertical-align: middle;
+//     -webkit-appearance: none;
+//     outline: 0;
+//     background: 0 0;
+//     text-align: center;
+//     position: relative;
+// }
+
+// input[type=radio] {
+//     border-radius: 50%;
+// }
+
+// input[type=checkbox]:before,
+// input[type=radio]:before {
+//     display: block;
+// }
+
+// input[type=radio]:checked:before {
+//     content: '';
+//     width: 6px;
+//     height: 6px;
+//     top: 50%;
+//     left: 50%;
+//     margin-top: -3px;
+//     margin-left: -3px;
+//     display: block;
+//     position: absolute;
+//     border-radius: 50%;
+//     background: #000;
+// }
+
+// input[type=checkbox]:checked:before,
+// input[type=checkbox]:indeterminate:before {
+//     content: "\2714";
+//     font-size: 12px;
+//     -webkit-font-smoothing: antialiased;
+//     text-align: center;
+//     line-height: 13px;
+//     color: #000;
+// }
+
+// input[type=checkbox]:indeterminate:before {
+//     content: "\f068";
+// }
+
+// input[type=checkbox]:disabled,
+// input[type=radio]:disabled {
+//     border-color: #ddd;
+// }
+
+// input[type=radio]:disabled:checked:before {
+//     background-color: #aaa;
+// }
+
+// input[type=checkbox]:disabled:checked:before,
+// input[type=checkbox]:disabled:indeterminate:before {
+//     color: #aaa;
+// }
+
+
+// // Style for button and pseudo button for input and link
+// .btn {
+// 	color: $btn_default_text_color;
+// 	font-family: $main_font_family;
+// 	font-size: 16px;
+// 	font-weight: 300;
+// 	padding: 5px 15px 7px;
+// 	border: none;
+// 	outline: none;
+// 	text-decoration: none;
+// 	display: inline-block;
+// 	background-color: $btn_default_bg_color;
+// 	text-align: center;
+// 	max-width: 100%;
+// 	cursor: pointer;
+// 	border-radius: 5px;
+// 	@include trs(0.3s);
+// 	&:hover {
+// 		background-color: lighten($btn_default_bg_color, 20%);
+// 	}
+// 	@each $status_el, $color_bg in $el_colors {
+// 		&__#{$status_el} {
+// 			background-color: $color_bg;
+// 			color: $btn_contrast_text_color;
+// 			&:hover {
+// 				background-color: lighten($color_bg, 20%);
+// 			}
+// 		}
+// 	}	
+// }

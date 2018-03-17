@@ -1,9 +1,9 @@
 /* Global variables */
 /* ======================================================================== */
-$main_font_family:								"Century Gothic";
-$main_color:									#000;
-$main_line_height:								1.2;
-$main_font_size:								16px;
+$main_font_family:								"Roboto Condensed", "Roboto", Arial, sans-serif;
+$main_color:									#414445;
+$main_line_height:								1.65;
+$main_font_size:								18px;
 
 $container_width:								970px;
 
@@ -43,7 +43,7 @@ $grid_padding:									20px;
 $input_color:									$main_color;
 $input_bg_color:								#fff;
 $input_border_color:							#ddd;
-$input_placeholder_color:						#ddd;
+$input_placeholder_color:						#a2a3a5;
 
 // Input hover color
 $input_hover_color:								#fff;
