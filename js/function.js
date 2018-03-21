@@ -2,6 +2,7 @@ var TempApp = {
     lgWidth: 1200,
     mdWidth: 992,
     smWidth: 768,
+    resized: false,
     iOS: function() { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
     touchDevice: function() { return navigator.userAgent.match(/iPhone|iPad|iPod|Android|BlackBerry|Opera Mini|IEMobile/i); }
 };
@@ -13,7 +14,15 @@ function isXsWidth() { return $(window).width() < TempApp.smWidth; } // < 768
 function isIOS() { return TempApp.iOS(); } // for iPhone iPad iPod
 function isTouch() { return TempApp.touchDevice(); } // for touch device
 
+var winSmall = 715;
+var winMidle = 1425;
+
+if (isTouch()) {
+    var winMidle = 1440;
+    var winSmall = 730;
+}
 $(document).ready(function() {
+
 
     // Хак для клика по ссылке на iOS
     if (isIOS()) {
@@ -33,77 +42,168 @@ $(document).ready(function() {
 		document.documentElement.setAttribute('data-browser', 'not-flex');
 	}
 
-	// First screen full height
-	function setHeiHeight() {
-	    $('.full__height').css({
-	        minHeight: $(window).height() + 'px'
-	    });
-	}
-	setHeiHeight(); // устанавливаем высоту окна при первой загрузке страницы
-	$(window).resize( setHeiHeight ); // обновляем при изменении размеров окна
-
-
-	// Reset link whte attribute href="#"
-	$('[href*="#"]').click(function(event) {
-		event.preventDefault();
-	});
-
-	// Scroll to ID // Плавный скролл к элементу при нажатии на ссылку. В ссылке указываем ID элемента
-	// $('#main__menu a[href^="#"]').click( function(){ 
-	// 	var scroll_el = $(this).attr('href'); 
-	// 	if ($(scroll_el).length != 0) {
-	// 	$('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
-	// 	}
-	// 	return false;
-	// });
-
-	// Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
-    // $(document).ready(function(){
-    //     var HeaderTop = $('#header').offset().top;
-        
-    //     $(window).scroll(function(){
-    //             if( $(window).scrollTop() > HeaderTop ) {
-    //                     $('#header').addClass('stiky');
-    //             } else {
-    //                     $('#header').removeClass('stiky');
-    //             }
-    //     });
-    // });
-   	// setGridMatch($('[data-grid-match] .grid__item'));
-   	// gridMatch();
 	checkOnResize();
+    
+    $('body').on('click', '.gridToggleInfo__video_count', function(event) {
+        event.preventDefault();
+        var wrap = $(this).closest('.gridToggleInfo__video');
+        var id = $(this).data('video');
+        var togle = wrap.find('.gridToggleInfo__video_count');
+        var video = wrap.find('.video__wrap');
+
+        togle.removeClass('active');
+        video.removeClass('active');
+
+        $(this).addClass('active');
+        wrap.find('[data-video-id='+id+']').addClass('active');
+
+    });
+
+    jobsInfoToggler();
+
 });
 
+// begin Jobs page show description
+function jobsInfoToggler() {
+
+    $('body').on('click touchend', '.gridToggle__wrap', function(event) {
+        event.preventDefault();
+        var wrap = $(this).closest('.gridToggle__item'),
+            row = $(this).closest('.gridToggle__row'),
+            id = wrap.attr('id'),
+            info = wrap.find('.gridToggleInfo'),
+            infoCont = wrap.find('.gridToggleInfo > .container'),
+            cloned = row.find('.gridToggleInfo.cloned'),
+            clonedContent = row.find('.gridToggleInfo.cloned > .container'),
+            clonedId = cloned.data('cloned');
+
+        if ($(window).width() >= winSmall) {
+            if ($('.gridToggle__wrap.active').length > 0) {
+                jobsInfoHide();
+            }
+
+            if (id != clonedId) {
+
+                $(this).addClass('active');
+                info.clone().addClass('cloned').appendTo(row);
+
+                setTimeout(function() {
+                    sliderInfoInit(row.find('.gridToggleInfo.cloned').find('.gridToggleSlider'), row.find('.gridToggleInfo.cloned').find('.gridToggleSlider_thumbs'))
+                }, 300);
+        
+                if ($(window).width() <= winMidle) {
+                    $('.gridToggleInfo.cloned').find('.gridToggleInfo__name').prependTo('.gridToggleInfo.cloned> .container');
+                }
+
+                return false;
+ 
+            }
+
+        } else {
+            if ($(this).hasClass('active')) {
+
+                $(this).removeClass('active');
+
+                info.removeClass('active');
+
+            } else {
+                $('.gridToggle__wrap').not($(this)).removeClass('active');
+
+                $('.gridToggleInfo').not(info).removeClass('active');
+                
+                $(this).addClass('active');
+
+                info.addClass('active');
+
+                setTimeout(function() {
+                    sliderInfoInit(wrap.find('.gridToggleSlider'), wrap.find('.gridToggleSlider_thumbs'))
+                }, 300);
+            }
+
+            if ($(window).width() <= winMidle) {
+                info.find('.gridToggleInfo__name').prependTo(infoCont);
+            }
+
+        }
+
+    });
+
+}
+
+function jobsItemWrap() {
+    var $set = $('.gridToggle__row').children();    
+    if ($(window).width() <= winMidle) {
+        if ($('div').is('.gridToggle__row_mob') == false) {
+            $('.gridToggle__row').each(function(){
+
+                var item = $(this).find('.gridToggle__item:lt(2)');
+
+                item.wrapAll('<div class="gridToggle__row gridToggle__row_mob"></div>');
+
+                jobsInfoHide();
+                
+            });
+        }
+    } else {
+        $('.gridToggle__row .gridToggle__item').unwrap('.gridToggle__row_mob');
+        jobsInfoHide();
+    }
+}
+
+function jobsInfoHide() {
+    $('.gridToggleInfo.cloned').remove();
+    $('.gridToggle__wrap').removeClass('active');
+    return false;
+}
+
+function sliderInfoInit(slider, sliderNav) {
+    if (slider.hasClass('.slick-initialized')) {
+        $(slider, sliderNav).each(function() {        
+            $(this).slick('resize');
+        });
+    } else {    
+        slider.not('.slick-initialized').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: sliderNav
+        });
+        sliderNav.not('.slick-initialized').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: slider,
+            dots: false,
+            infinite: false,
+            centerMode: false,
+            focusOnSelect: true,
+            prevArrow: '<div class="owl-prev"><img src="img/arrow.svg"></div>',
+            nextArrow: '<div class="owl-next"><img src="img/arrow.svg"></div>'
+        });
+    }
+}
+// end Jobs page show description
+
+
 $(window).resize(function() {
+    var windowWidth = $(window).width();
+    // Запрещаем выполнение скриптов при смене только высоты вьюпорта (фикс для скролла в IOS и Android >=v.5)
+    if (TempApp.resized == windowWidth) { return; }
+    TempApp.resized = windowWidth;
+
 	checkOnResize()
 });
 
 function checkOnResize() {
-   	// setGridMatch($('[data-grid-match] .grid__item'));
-   	// gridMatch();
+    jobsItemWrap();
+    if ($(window).width() < winSmall) {
+        if ($('.gridToggleInfo.cloned')) {
+            jobsInfoHide();
+        }
+    }
 }
 
-// function gridMatch() {
-//    	$('[data-grid-match] .grid__item').matchHeight({
-//    		byRow: true,
-//    	});
-// }
-
-// function setGridMatch(columns) {
-// 	var tallestcolumn = 0;
-// 	columns.removeAttr('style');
-// 	columns.each( function() {
-// 		currentHeight = $(this).height();
-// 		if(currentHeight > tallestcolumn) {
-// 			tallestcolumn = currentHeight;
-// 		}
-// 	});
-// 	setTimeout(function() {
-// 		columns.css('minHeight', tallestcolumn);
-// 	}, 100);
-// }
-
-// Old function
+// Скрипты написанные до меня
 $(function() {
     "use strict";
 
